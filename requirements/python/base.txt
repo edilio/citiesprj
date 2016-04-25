@@ -1,4 +1,5 @@
-pip install Django==1.9.5
-pip install djangorestframework==3.3.3
-pip install django-rest-swagger==0.3.6
-pip install django-localflavor==1.2
+Django==1.9.5
+djangorestframework==3.3.3
+django-rest-swagger==0.3.6
+django-localflavor==1.2
+django-filter==0.13.0
