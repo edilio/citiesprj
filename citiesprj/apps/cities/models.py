@@ -1,16 +1,17 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from localflavor.us.models import USStateField, USZipCodeField
 
 
 class City(models.Model):
     city = models.CharField(max_length=50)
-    state = models.CharField(max_length=2)
-    zip_code = models.CharField(max_length=10, blank=True, db_index=True)
+    state = USStateField()
+    zip_code = USZipCodeField(blank=True, db_index=True)
 
     @property
     def city_state_zip(self):
-        return self.name + " " + self.state + ", " + self.zip_code
+        return self.city + " " + self.state + ", " + self.zip_code
 
     class Meta:
         verbose_name_plural = "Cities"
