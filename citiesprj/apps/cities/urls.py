@@ -9,8 +9,6 @@ from . import views
 router = routers.SimpleRouter(trailing_slash=True)
 router.register(r'cities', views.CityViewSet)
 
-urlpatterns = patterns('',
-
-)
+urlpatterns = []
 
 urlpatterns += router.urls
