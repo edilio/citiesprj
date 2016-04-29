@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/cities/', include('citiesprj.apps.cities.urls', namespace='cities')),
+    url(r'^api/v1/docs/', include('rest_framework_swagger.urls')),
 
 ]
